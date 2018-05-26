@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   
+    <link rel="manifest" href="./manifest.json">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pomodoro Timer</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+    <!-- Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+    <link rel="icon" href="./favicon.png" type="image/gif" >
+</head>
+
+<body>
+    <!-- Navbar Begins -->
+    <nav>
+        <div class="nav-wrapper black">
+            <a href="#" class="brand-logo center">Pomodoro</a>
+        </div>
+    </nav>
+    <!-- NavBar ends -->
+    <div class="container mainContainer">
+        <div class="row ">
+
+
+            <div class="card col s12 ">
+
+                <div class="card-content center card-root">
+                    <h2 id="timeDOM" style="font-family: 'Orbitron', sans-serif;">25 : 00</h2>
+                    <div class="progress">
+                        <div class="determinate black" id="progressBar"></div>
+                    </div>
+
+
+                </div>
+
+                <div class="card-action center row">
+                    <div class="center  col s4  ">
+                        <a class="waves-effect waves-light  " onclick="playPauseFxn();">
+                            <i class="material-icons medium" id="playPauseIcon">
+                                play_circle_outline
+                            </i>
+                        </a>
+                    </div>
+                    <div class="center  col s4  ">
+                        <a class="waves-effect waves-light " onclick="resetTimeFxn(5,0);">
+                            <i class="material-icons medium " style="color: #01579b;">
+                                replay_5
+                            </i>
+                        </a>
+                    </div>
+                    <div class="center  col s4  ">
+                        <a class="waves-effect waves-light " onclick="resetTimeFxn(25,0);">
+                            <i class="material-icons medium " style="color: #01579b;">
+                                replay
+                            </i>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-content center">
+                <h4>What is the pomodoro technique?</h4>
+                <div class="divider"></div>
+                <br/>
+                <p>The pomodoro technique is a proven and popular time management life hack. The main premise behind the technique
+                    is to work in blocks of time, typically 25 minutes long (called pomodoro sessions), followed by a 5 minute
+                    break. Each pomodoro session should demand your full attention on one task, every break requires you
+                    to step away from your work to rest. The result is greatly improved productivity during focused work
+                    sessions, that can be maintained through effectively managing distractions and taking regular breaks.</p>
+            </div>
+        </div>
+    </div>
+    <div style="visibility: hidden;">
+        <audio id="startAudio">
+            <source src="./Sounds/start.mp3" type="audio/mpeg">
+        </audio>
+        <audio id="pauseAudio">
+            <source src="./Sounds/pause.mp3" type="audio/mpeg">
+        </audio>
+        <audio id="resetAudio">
+            <source src="./Sounds/reset.mp3" type="audio/mpeg">
+        </audio>
+        <audio controls loop id="alarmAudio">
+            <source src="./Sounds/alarm.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
+</body>
+
+
+<link rel="stylesheet" href="./style.css">
+<script src="./script.js"></script>
+<script>
+    console.log("Logged Successfully from the index.html")
+</script>
+
+</html>
